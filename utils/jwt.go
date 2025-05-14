@@ -27,7 +27,7 @@ func VerifyToken(token string) error {
 			return nil, errors.New("unexpected signing method")
 		}
 
-		return secretKey, nil
+		return []byte(secretKey), nil
 	})
 
 	if err != nil {
